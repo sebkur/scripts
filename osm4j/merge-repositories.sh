@@ -14,7 +14,7 @@ function clone {
 mkdir -p "$WORK"
 cd "$WORK"
 
-git clone "git@github.com:topobyte/osm4j-merge.git"
+git clone "git@github.com:topobyte/osm4j.git"
 
 for REPO in $REPOS; do
   pushd .
@@ -23,7 +23,7 @@ for REPO in $REPOS; do
   popd
 done
 
-cd osm4j-merge
+cd osm4j
 
 for REPO in $REPOS; do
   git remote add "$REPO" "../$REPO"
